@@ -1,0 +1,35 @@
+<mat-card>
+    <mat-card-content>
+        <form>
+            <div fx fxLayout="column" fxLayoutGap="10">
+                <mat-label>Any confidential information you want to share?</mat-label>
+                <mat-form-field appearance="outline">
+                    <input matInput placeholder="Confidential information" />
+                </mat-form-field>
+            </div>
+            <div fx fxLayout="row" fxLayoutGap="50" fxLayoutAlign="start center" fxLayoutGap="20">
+                <mat-label fxLayoutGap="20">Do you want to share any attachments?</mat-label>
+                <app-file-upload></app-file-upload>
+            </div>
+           
+            <div fx fxLayout="column" >
+                <mat-label>How satisfied are you with the overall assignment process?</mat-label>
+                <app-rating></app-rating>
+            </div>
+            <div fx fxLayout="column">
+                <mat-label>How satisfied are you with your fellow assessors?</mat-label>
+                <app-rating></app-rating>
+            </div>
+            <div fx fxLayout="column">
+                <mat-label>How satisfied are you with the services provided by the travel agent?</mat-label>
+                <app-rating></app-rating>
+            </div>
+            <div fx fxLayout="column" fxLayoutGap="10">
+                <mat-label>Remarks</mat-label>
+                <mat-form-field appearance="outline">
+                    <input matInput placeholder="Remarks" />
+                </mat-form-field>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

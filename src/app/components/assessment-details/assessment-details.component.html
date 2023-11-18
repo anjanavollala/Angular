@@ -1,0 +1,29 @@
+<mat-card>
+    <mat-card-content>
+        <div fx fxLayout="row" fxLayoutGap='20' fxLayoutAlign="start center">
+            <p fxFlex='33'>College</p>
+            <mat-form-field appearance="outline" fxFlex="67">
+                <input matInput placeholder="College" />
+            </mat-form-field>
+        </div>
+        <div fx fxLayout="row" fxLayoutGap='20' fxLayoutAlign="start center">
+            <p fxFlex='33'>App</p>
+            <mat-form-field appearance="outline" fxFlex="67">
+                <input matInput placeholder="App" />
+            </mat-form-field>
+        </div>
+        <div fx fxLayout="row" fxLayoutGap='20' fxLayoutAlign="start center">
+            <p fxFlex='33'>Date</p>
+            <mat-form-field appearance="outline" fxFlex="67">
+                <input matInput placeholder="Date" />
+            </mat-form-field>
+        </div>
+        <div fx fxLayout="row" fxLayoutGap='20' fxLayoutAlign="start center">
+            <p fxFlex='33'>Geo Location</p>
+            <mat-form-field appearance="outline" fxFlex="75">
+                <input matInput placeholder="Geo Location" />
+            </mat-form-field>
+        </div>
+        <app-file-upload title="Files (SAF Documents)" [showUploadedFiles]="true" />
+    </mat-card-content>
+</mat-card>

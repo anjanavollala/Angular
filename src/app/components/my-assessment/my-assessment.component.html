@@ -1,0 +1,16 @@
+
+<div fx fxLayout='column' fxLayoutGap='20' >
+    <div fx fxLayout='row' fxLayoutAlign='end center' fxLayoutGap='20'>
+        <span *ngFor="let status of statusFilter">
+            <mat-checkbox [(ngModel)]="status.selected" [color]="status.color" (change)="onFilterChanged()">
+                {{status.value}}
+            </mat-checkbox>
+        </span>
+        <button mat-raised-button color="primary" (click)='exportData()'>Export</button>
+    </div>
+    
+    <ag-grid-angular style='height: 400px' class='ag-theme-alpine' [columnDefs]='columnDefs'
+        [defaultColDef]='defaultColDef' [gridOptions]='gridOptions' [rowData]='rowData$ | async' [animateRows]='true'
+        (gridReady)='onGridReady($event)' [isExternalFilterPresent]="isExternalFilterPresent"
+        [doesExternalFilterPass]="doesExternalFilterPass"></ag-grid-angular>
+</div>

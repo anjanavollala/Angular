@@ -1,0 +1,76 @@
+<mat-card>
+    <mat-card-content>
+        <div fx fxLayout="row" fxLayoutGap='20' fxLayoutAlign="start center">
+            <mat-label fxFlex="33">College</mat-label>
+            <mat-form-field appearance="outline" fxFlex="67">
+                <input matInput placeholder="College" />
+            </mat-form-field>
+        </div>
+        <div fx fxLayout="row" fxLayoutGap='20' fxLayoutAlign="start center">
+            <mat-label fxFlex="33">App</mat-label>
+            <mat-form-field appearance="outline" fxFlex="67">
+                <input matInput placeholder="App" />
+            </mat-form-field>
+        </div>
+        <div fx fxLayout="row" fxLayoutGap='20' fxLayoutAlign="start center">
+            <mat-label fxFlex="33">Date</mat-label>
+            <mat-form-field appearance="outline" fxFlex="67">
+                <input matInput placeholder="Date" />
+            </mat-form-field>
+        </div>
+        <mat-divider></mat-divider>
+        <div fx fxLayout="row" fxLayoutGap="50" style="margin-top: 24px;">
+            <div fxFlex fx fxLayout="column">
+                <div fx fxLayout="row" fxLayoutAlign="start center">
+                    <mat-label fxFlex="33">From Location</mat-label>
+                    <mat-form-field appearance="outline" fxFlex="67">
+                        <input matInput placeholder="From Location" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div fxFlex fx fxLayout="column">
+                <div fx fxLayout="row" fxLayoutAlign="start center">
+                    <mat-label fxFlex="33">Destination</mat-label>
+                    <mat-form-field appearance="outline" fxFlex="67">
+                        <input matInput placeholder="Destination" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+        <div fx fxLayout="row" fxLayoutGap="50">
+            <div fxFlex fx fxLayout="column">
+                <div fx fxLayout="row" fxLayoutAlign="start center">
+                    <mat-label fxFlex="33">Travel Date</mat-label>
+                    <mat-form-field appearance="outline" fxFlex="67">
+                        <input matInput [matDatepicker]="picker" placeholder="Travel Date">
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div fxFlex fx fxLayout="column">
+                <div fx fxLayout="row" fxLayoutAlign="start center">
+                    <mat-label fxFlex="33">Amount</mat-label>
+                    <mat-form-field appearance="outline" fxFlex="67">
+                        <input matInput placeholder="Amount" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+        <div fx fxLayout="row" fxLayoutGap="50">
+            <div fxFlex fx fxLayout="column">
+                <div fx fxLayout="row" fxLayoutAlign="center center">
+                    <app-file-upload></app-file-upload>
+                </div>
+            </div>
+            <div fxFlex fx fxLayout="column">
+                <div fx fxLayout="row" fxLayoutAlign="center center">
+                    <button mat-raised-button color="primary">Add</button>
+                </div>
+            </div>
+        </div>
+        <ag-grid-angular style="height: 400px; margin-top: 24px;" class="ag-theme-alpine" [columnDefs]="columnDefs"
+            [defaultColDef]="defaultColDef" [gridOptions]="gridOptions" [rowData]="rowData" [animateRows]="true"
+            (gridReady)="onGridReady($event)"></ag-grid-angular>
+    </mat-card-content>
+</mat-card>

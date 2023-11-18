@@ -1,0 +1,17 @@
+<mat-toolbar color="primary" fxLayoutGap="10">
+    <div fx fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10" routerLink="/my-assessments"
+        style="cursor: pointer;">
+        <img src="assets/logo.png" alt="NMC" height="40">
+        <span>National Medical Commission</span>
+    </div>
+    <span fxFlex></span>
+    <button mat-button routerLink="/my-assessments" routerLinkActive="active">My Assessments</button>
+    <button mat-button routerLink="/assessment-details" routerLinkActive="active">Assessment Details</button>
+    <button mat-button routerLink="/confidential" routerLinkActive="active">Confidential</button>
+    <button mat-button routerLink="/claims" routerLinkActive="active">Claims</button>
+    <button mat-button *ngIf="!isLoggedIn(); else showLogout" routerLink="/login"
+        routerLinkActive="active">Login</button>
+    <ng-template #showLogout>
+        <button mat-button (click)="logout()">Logout</button>
+    </ng-template>
+</mat-toolbar>

@@ -1,0 +1,5 @@
+<div class="rating">
+    <button mat-icon-button *ngFor="let star of stars" (click)="rate(star)" [color]="isRated(star) ? 'primary' : ''">
+        <mat-icon>{{ isRated(star) ? 'star' : 'star_border' }}</mat-icon>
+    </button>
+</div>

@@ -1,0 +1,27 @@
+[
+    {
+        "college": "COL 001",
+        "app": "App 001",
+        "date": "12-02-2023",
+        "status": "Open",
+        "saf": "./assessment-details",
+        "confidential": "./confidential",
+        "claims": "./claims"
+    },
+    {
+        "college": "COL 001",
+        "app": "App 001",
+        "date": "12-02-2023",
+        "status": "In Progress",
+        "saf": "./assessment-details",
+        "claims": "./claims"
+    },
+    {
+        "college": "COL 001",
+        "app": "App 001",
+        "date": "12-02-2023",
+        "status": "Completed",
+        "saf": "./assessment-details",
+        "claims": "./claims"
+    }
+]
